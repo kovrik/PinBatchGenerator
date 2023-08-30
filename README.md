@@ -29,3 +29,15 @@ System.out.println("PINs Batch Size: " + pins.size()); // prints 1000
 System.out.println("Number of Distinct PINs: " + pins.stream().distinct().count()); // prints 1000
 System.out.println("Generated batch of unique PINs: " + pins); // prints all 1000 unique PINs
 ```
+
+Build instructions:
+
+Run
+```
+mvn clean install
+```
+to run all tests and generate a JAR file.
+
+Requirements:
+- Java 11+
+- Maven
