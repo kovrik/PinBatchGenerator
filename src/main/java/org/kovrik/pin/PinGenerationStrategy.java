@@ -34,6 +34,19 @@ package org.kovrik.pin;
  * - generate PINs using {@link java.util.Random}
  * - generate PINs using {@link java.security.SecureRandom}
  * etc.
+ * <p>
+ * WARNING:
+ * this interface currently defines PIN as a String.
+ * THIS IS FOR DEMONSTRATION PURPOSES ONLY AND TO KEEP THINGS SIMPLE.
+ * Technically, Java Strings are immutable and can be interned,
+ * and for these reasons it is not recommended to use Strings to store sensitive information
+ * such as user passwords, encryption keys or card PINs.
+ * Instead, one should use an array of bytes (byte[]) or chars (char[]) or some other secure alternative,
+ * and make sure to wipe it after usage.
+ * <p>
+ * See <a href="https://stackoverflow.com/questions/8881291/why-is-char-preferred-over-string-for-passwords"/>
+ * and <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#PBEEx"/>
+ * for details.
  */
 @FunctionalInterface
 public interface PinGenerationStrategy {
